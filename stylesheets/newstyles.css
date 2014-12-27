@@ -1,0 +1,148 @@
+h1,
+.h1 {
+  font-size: 30px;
+}
+h1.loud,
+.h1.loud {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h2,
+.h2 {
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+body {
+  color: #ffffff;
+}
+.section {
+  background-color: #2e2e30;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.section.alt {
+  background-color: #444447;
+}
+.section.section-highlight {
+  background-color: #b57d95;
+}
+.section .container-inner {
+  width: 800px;
+  margin: auto;
+}
+.section.header {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid #59595a;
+}
+.section.header .container-inner {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.section.header .heading-container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.section.header .heading-container .heading {
+  font-size: 32px;
+}
+.section.header .heading-container .sub-heading {
+  color: #737373;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.section.header .nav-container {
+  float: right;
+}
+.section.header .nav-container a {
+  color: #a0a0a0;
+  margin-left: 50px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.section.splash {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.section.about h2 {
+  border-left: 2px solid #59595a;
+  padding-left: 10px;
+  margin: 0;
+}
+.section.about p {
+  color: #737373;
+}
+.section.shout-out {
+  text-align: center;
+}
+.section.connect {
+  text-align: center;
+}
+.section.connect .connect-links {
+  margin-left: 20px;
+}
+.section.connect .connect-links .connect-link {
+  margin-right: 20px;
+}
+.section.connect .connect-links .connect-link img {
+  background-color: #b57d95;
+}
+.section.connect .contact-details-left {
+  text-align: right;
+}
+.section.connect .contact-details-right {
+  text-align: left;
+}
+.section.footer {
+  text-align: center;
+}
+.section.footer .heading {
+  font-size: 32px;
+}
+.section.footer .sub-heading {
+  color: #737373;
+}
+.vertical-align {
+  display: inline-block;
+  float: none;
+}
+.vertical-align.center {
+  vertical-align: middle;
+}
+.vertical-align.bottom {
+  vertical-align: bottom;
+}
+.horizontal-center {
+  text-align: center;
+}
+.action-container {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.highlight {
+  color: #b57d95 !important;
+}
+.styled-link {
+  padding: 9px 16px;
+  font-size: 15px;
+  line-height: 37px;
+  border: 1px solid #59595a;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+.styled-link.alt {
+  border-color: #8f8f91;
+}
+.styled-link.on-highlight {
+  border-color: #c991a9;
+}
+.unstyled-link,
+.unstyled-link:hover,
+.unstyled-link:active,
+.unstyled-link:focus {
+  color: inherit;
+  text-decoration: none;
+}
