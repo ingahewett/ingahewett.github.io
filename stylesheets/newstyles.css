@@ -54,6 +54,7 @@ body {
 }
 .section.header .nav-container {
   float: right;
+  white-space: nowrap;
 }
 .section.header .nav-container a {
   color: #a0a0a0;
