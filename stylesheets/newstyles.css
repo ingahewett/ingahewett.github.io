@@ -27,10 +27,6 @@ body {
 .section.section-highlight {
   background-color: #b57d95;
 }
-.section .container-inner {
-  width: 800px;
-  margin: auto;
-}
 .section.header {
   padding-top: 0;
   padding-bottom: 0;
@@ -66,6 +62,9 @@ body {
   padding-top: 0;
   padding-bottom: 0;
 }
+.section.splash img {
+  height: 330px;
+}
 .section.about h2 {
   border-left: 2px solid #59595a;
   padding-left: 10px;
@@ -73,6 +72,9 @@ body {
 }
 .section.about p {
   color: #737373;
+}
+.section.about img {
+  height: 220px;
 }
 .section.shout-out {
   text-align: center;
