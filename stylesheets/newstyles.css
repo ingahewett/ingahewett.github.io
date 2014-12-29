@@ -74,7 +74,7 @@ body {
   color: #737373;
 }
 .section.about img {
-  height: 220px;
+  max-width: 100%;
 }
 .section.shout-out {
   text-align: center;
