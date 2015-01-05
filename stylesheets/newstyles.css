@@ -149,6 +149,15 @@ body {
   color: inherit;
   text-decoration: none;
 }
-.carousel-inner img {
+.carousel-inner .item {
+  height: 450px;
+  width: 604px;
+}
+.carousel-inner .item img {
   max-height: 450px !important;
+  max-width: 604px !important;
+  margin: auto;
+}
+.carousel-indicators {
+  bottom: -18px;
 }
