@@ -52,9 +52,18 @@ body {
   float: right;
   white-space: nowrap;
 }
+.section.header .nav-container .nav-item {
+  margin-left: 50px;
+}
+.section.header .nav-container .dropdown-menu {
+  background-color: #444447;
+  border-color: #8f8f91;
+}
+.section.header .nav-container .dropdown-menu a {
+  color: #ffffff;
+}
 .section.header .nav-container a {
   color: #a0a0a0;
-  margin-left: 50px;
   font-size: 12px;
   text-transform: uppercase;
 }
