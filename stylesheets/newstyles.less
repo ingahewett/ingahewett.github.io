@@ -24,6 +24,9 @@ h2, .h2 {
   text-transform: uppercase;
 }
 
+a:focus {
+  outline: none;
+}
 
 body {
   color: @text-light;
@@ -77,10 +80,13 @@ body {
       }
 
       .dropdown-menu {
-        background-color: @bg-light;
-        border-color: @border-light;
+        background-color: @bg-dark;
+        border-color: @border-dark;
         a {
-          color: @text-light;
+          color: @text-medium;
+          &:hover {
+            background-color: @bg-light;
+          }
         }
       }
 

@@ -13,6 +13,9 @@ h2,
   line-height: 30px;
   text-transform: uppercase;
 }
+a:focus {
+  outline: none;
+}
 body {
   color: #ffffff;
 }
@@ -56,11 +59,14 @@ body {
   margin-left: 50px;
 }
 .section.header .nav-container .dropdown-menu {
-  background-color: #444447;
-  border-color: #8f8f91;
+  background-color: #2e2e30;
+  border-color: #59595a;
 }
 .section.header .nav-container .dropdown-menu a {
-  color: #ffffff;
+  color: #a0a0a0;
+}
+.section.header .nav-container .dropdown-menu a:hover {
+  background-color: #444447;
 }
 .section.header .nav-container a {
   color: #a0a0a0;
