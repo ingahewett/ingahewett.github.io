@@ -24,6 +24,10 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.section .content {
+  width: 600px;
+  margin: auto;
+}
 .section.alt {
   background-color: #444447;
 }
