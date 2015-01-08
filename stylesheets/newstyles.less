@@ -11,6 +11,9 @@
 @highlight: rgb(181, 125, 149);//#53e0dc;
 @border-highlight: rgb(201, 145, 169);//#75e6e3;
 
+@width-sm: 768px;
+@width-sm-1: 767px;
+
 h1, .h1 {
   font-size: 30px;
   &.loud {
@@ -36,10 +39,18 @@ body {
   background-color: @bg-dark;
   padding-top: 30px;
   padding-bottom: 30px;
+  min-width: 430px;
 
   .content {
     width: 600px;
     margin: auto;
+  }
+  
+  @media (max-width: @width-sm-1) {
+    .content {
+      width: 400px;
+      margin: auto;
+    }
   }
 
   &.alt {
@@ -55,11 +66,12 @@ body {
     padding-bottom: 0;
     border-bottom: 1px solid @border-dark;
 
-    .container-inner {
-      padding-left: 20px;
-      padding-right: 20px;
+    @media (min-width: @width-sm) {
+      .row {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
-
     .heading-container {
       padding-top: 15px;
       padding-bottom: 15px;
@@ -79,6 +91,10 @@ body {
     .nav-container {
       float: right;
       white-space: nowrap;
+      @media (max-width: @width-sm-1) {
+        margin-left: -50px;
+        margin-bottom: 20px;
+      }
 
       .nav-item {
         margin-left: 50px;
@@ -212,11 +228,6 @@ body {
   text-decoration: none;
 }
 
-
-
-
-
-
 .carousel-inner {
   .item {
     height: 450px;
@@ -230,6 +241,28 @@ body {
   }
 }
 
+@media (max-width: @width-sm-1) {
+  .carousel-inner {
+    .item {
+      height: 270px;
+      width: 404px;
+
+      img {
+        max-height: 270px !important;
+        max-width: 404px !important;
+        margin: auto;
+      }
+    }
+  }
+}
+
 .carousel-indicators {
   bottom: -18px;
+  white-space: nowrap;
+}
+
+@media (max-width: @width-sm-1) {
+  .carousel-indicators-long {
+    margin-left: -41%;
+  }
 }

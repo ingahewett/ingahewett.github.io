@@ -23,10 +23,17 @@ body {
   background-color: #2e2e30;
   padding-top: 30px;
   padding-bottom: 30px;
+  min-width: 430px;
 }
 .section .content {
   width: 600px;
   margin: auto;
+}
+@media (max-width: 767px) {
+  .section .content {
+    width: 400px;
+    margin: auto;
+  }
 }
 .section.alt {
   background-color: #444447;
@@ -39,9 +46,11 @@ body {
   padding-bottom: 0;
   border-bottom: 1px solid #59595a;
 }
-.section.header .container-inner {
-  padding-left: 20px;
-  padding-right: 20px;
+@media (min-width: 768px) {
+  .section.header .row {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .section.header .heading-container {
   padding-top: 15px;
@@ -58,6 +67,12 @@ body {
 .section.header .nav-container {
   float: right;
   white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .section.header .nav-container {
+    margin-left: -50px;
+    margin-bottom: 20px;
+  }
 }
 .section.header .nav-container .nav-item {
   margin-left: 50px;
@@ -177,6 +192,23 @@ body {
   max-width: 604px !important;
   margin: auto;
 }
+@media (max-width: 767px) {
+  .carousel-inner .item {
+    height: 270px;
+    width: 404px;
+  }
+  .carousel-inner .item img {
+    max-height: 270px !important;
+    max-width: 404px !important;
+    margin: auto;
+  }
+}
 .carousel-indicators {
   bottom: -18px;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .carousel-indicators-long {
+    margin-left: -41%;
+  }
 }
