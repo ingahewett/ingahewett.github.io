@@ -1,15 +1,16 @@
 @text-light: #fff;
-@text-medium: #a0a0a0;
+@text-medium: #c0c0c0;
 @text-dark: #737373;
 
 @bg-dark: #2e2e30;
+@bg-dark-transparent: rgba(46, 46, 48, 0.7);
 @bg-light: #444447;
 
 @border-light: #8f8f91;
 @border-dark: #59595a;
 
-@highlight: rgb(181, 125, 149);//#53e0dc;
-@border-highlight: rgb(201, 145, 169);//#75e6e3;
+@highlight: rgb(181, 125, 149);
+@border-highlight: rgb(201, 145, 169);
 
 @width-sm: 768px;
 @width-sm-1: 767px;
@@ -64,14 +65,24 @@ body {
   &.header {
     padding-top: 0;
     padding-bottom: 0;
-    border-bottom: 1px solid @border-dark;
 
-    @media (min-width: @width-sm) {
+    .row {
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: @bg-dark-transparent;
+      height: 290px;
+    }
+    @media (max-width: @width-sm-1) {
       .row {
-        padding-left: 20px;
-        padding-right: 20px;
+        height: 192px;
       }
     }
+
+    .content {
+      background-image: url('../images/shoot.jpg');
+      background-size: 100%;
+    }
+
     .heading-container {
       padding-top: 15px;
       padding-bottom: 15px;
@@ -81,7 +92,7 @@ body {
       }
 
       .sub-heading {
-        color: @text-dark;
+        color: @text-medium;
         font-size: 10px;
         text-transform: uppercase;
       }
@@ -89,25 +100,16 @@ body {
     }
 
     .nav-container {
-      float: right;
-      white-space: nowrap;
-      @media (max-width: @width-sm-1) {
-        margin-left: -50px;
-        margin-bottom: 20px;
-      }
+      margin-top: 45px;
+      border-left: 2px solid @border-light;
+      padding-left: 10px;
 
       .nav-item {
-        margin-left: 50px;
+        margin-top: 20px;
       }
-
-      .dropdown-menu {
-        background-color: @bg-dark;
-        border-color: @border-dark;
-        a {
-          color: @text-medium;
-          &:hover {
-            background-color: @bg-light;
-          }
+      @media (max-width: @width-sm-1) {
+        .nav-item {
+          margin-top: 10px;
         }
       }
 
@@ -115,6 +117,12 @@ body {
         color: @text-medium;
         font-size: 12px;
         text-transform: uppercase;
+      }
+    }
+
+    @media (max-width: @width-sm-1) {
+      .nav-container {
+        margin-top: 0;
       }
     }
   }
@@ -236,6 +244,12 @@ body {
   text-decoration: none;
 }
 
+.carousel {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: @bg-light;
+}
+
 .carousel-inner {
   .item {
     height: 450px;
@@ -264,6 +278,11 @@ body {
   }
 }
 
+.carousel-control {
+  &:focus:not(:hover) {
+    opacity: 0.5;
+  }
+}
 .carousel-indicators {
   bottom: -18px;
   white-space: nowrap;
