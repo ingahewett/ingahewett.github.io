@@ -102,13 +102,18 @@ body {
 .section.about h2 {
   border-left: 2px solid #8f8f91;
   padding-left: 10px;
-  margin: 0;
+  margin-top: 0;
 }
 .section.about p {
   color: #a0a0a0;
 }
 .section.about img {
   max-width: 100%;
+}
+.section.portfolio h2 {
+  border-left: 2px solid #8f8f91;
+  padding-left: 10px;
+  margin-top: 0;
 }
 .section.shout-out {
   text-align: center;
@@ -211,4 +216,23 @@ body {
   .carousel-indicators-long {
     margin-left: -41%;
   }
+}
+.nav-tabs li a {
+  color: #a0a0a0;
+  background-color: #444447;
+  border: 0;
+}
+.nav-tabs li a:hover,
+.nav-tabs li a:focus {
+  background-color: #444447;
+  color: #ffffff;
+}
+.nav-tabs li.active a {
+  background-color: #444447;
+  color: #ffffff;
+}
+.nav-tabs li.active a:hover,
+.nav-tabs li.active a:focus {
+  background-color: #444447;
+  color: #ffffff;
 }
