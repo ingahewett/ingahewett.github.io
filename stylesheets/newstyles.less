@@ -1,5 +1,5 @@
 @text-light: #fff;
-@text-medium: #c0c0c0;
+@text-medium: #a0a0a0;
 @text-dark: #737373;
 
 @bg-dark: #2e2e30;
@@ -66,21 +66,26 @@ body {
     padding-top: 0;
     padding-bottom: 0;
 
-    .row {
-      padding-left: 20px;
-      padding-right: 20px;
-      background-color: @bg-dark-transparent;
-      height: 290px;
-    }
-    @media (max-width: @width-sm-1) {
+    .content {
+      background: url('../images/shoot.png') no-repeat;
+      background-size: 100%;
+      background-position-y: -45px;
+
       .row {
-        height: 192px;
+        background-color: @bg-dark-transparent;
+        height: 220px;
+      }
+      @media (max-width: @width-sm-1) {
+        .row {
+          height: 192px;
+        }
       }
     }
-
-    .content {
-      background-image: url('../images/shoot.jpg');
-      background-size: 100%;
+    @media (max-width: @width-sm-1) {
+      .content {
+        background-position-y: 0;
+        background-position-x: 20px;
+      }
     }
 
     .heading-container {
@@ -100,7 +105,7 @@ body {
     }
 
     .nav-container {
-      margin-top: 45px;
+      margin-top: 18px;
       border-left: 2px solid @border-light;
       padding-left: 10px;
 
@@ -149,6 +154,7 @@ body {
 
     img {
       max-width: 100%;
+      max-height: 198px;
     }
   }
 
