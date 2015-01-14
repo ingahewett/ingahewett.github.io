@@ -1,5 +1,14 @@
 $(function () {
 
+    var aboutTextUrl =
+    $.ajax({
+        type: 'GET',
+        url: 'https://c0901e6dae268d1d3023e19225e875d0794d7fc2.googledrive.com/host/0B-97c_xa0AumY002cnJ1U1FueGc/about.txt',
+        complete: function(response){
+            $('#about-text').html(response.responseText.replace(/\n/g, '<br>'));
+        }
+    });
+
     var categories = ['location', 'studio', 'editorial', 'lifestyle'];
     categories.forEach(function(category) {
         loadImages(category, 1);
