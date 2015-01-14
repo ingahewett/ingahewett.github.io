@@ -290,14 +290,8 @@ body {
   }
 }
 .carousel-indicators {
-  bottom: -18px;
+  bottom: -12px;
   white-space: nowrap;
-}
-
-@media (max-width: @width-sm-1) {
-  .carousel-indicators-long {
-    margin-left: -41%;
-  }
 }
 
 .nav-tabs {
@@ -313,14 +307,11 @@ body {
       }
     }
     &.active {
-      a {
+      a, a:hover, a:focus {
         background-color: @bg-light;
         color: @text-light;
-
-        &:hover, &:focus {
-          background-color: @bg-light;
-          color: @text-light;
-        }
+        border-top: 4px solid @highlight;
+        margin-top: -4px;
       }
     }
   }

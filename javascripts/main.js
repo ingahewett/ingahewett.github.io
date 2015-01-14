@@ -1,43 +1,35 @@
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-7078796-5']);
-_gaq.push(['_trackPageview']);
+$(function () {
 
-(function () {
-  var ga = document.createElement('script');
-  ga.type = 'text/javascript';
-  ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(ga, s);
-})();
+    var categories = ['location', 'studio', 'editorial', 'lifestyle'];
+    categories.forEach(function(category) {
+        loadImages(category, 1);
+    });
 
-(function (b) {
-  (function (a) {
-    "__CF"in b && "DJS"in b.__CF ? b.__CF.DJS.push(a) : "addEventListener"in b ? b.addEventListener("load", a, !1) : b.attachEvent("onload", a)
-  })(function () {
-    "FB"in b && "Event"in FB && "subscribe"in FB.Event && (FB.Event.subscribe("edge.create", function (a) {
-      _gaq.push(["_trackSocial", "facebook", "like", a])
-    }), FB.Event.subscribe("edge.remove", function (a) {
-      _gaq.push(["_trackSocial", "facebook", "unlike", a])
-    }), FB.Event.subscribe("message.send", function (a) {
-      _gaq.push(["_trackSocial", "facebook", "send", a])
-    }));
-    "twttr"in b && "events"in twttr && "bind"in twttr.events && twttr.events.bind("tweet", function (a) {
-      if (a) {
-        var b;
-        if (a.target && a.target.nodeName == "IFRAME")a:{
-          if (a = a.target.src) {
-            a = a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);
-            b = 0;
-            for (var c; c = a[b]; ++b)if (c.indexOf("url") === 0) {
-              b = unescape(c.split("=")[1]);
-              break a
-            }
-          }
-          b = void 0
-        }
-        _gaq.push(["_trackSocial", "twitter", "tweet", b])
-      }
-    })
-  })
-})(window);
+    function loadImages(category, i) {
+        var url = 'https://c0901e6dae268d1d3023e19225e875d0794d7fc2.googledrive.com/host/0B-97c_xa0AumY002cnJ1U1FueGc/' + category + '/' + i.toString() + '.jpg';
+        fetchImage(url, function(img) {
+            loadImages(category, i + 1);
+            deployImage(img, category, i);
+        });
+    }
+
+    function fetchImage(url, success, error) {
+        var img = $("<img />").attr('src', url)
+            .load(function() {
+                if(!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
+                    if(error) error(this);
+                } else {
+                    success(img);
+                }
+            });
+    }
+
+    function deployImage(img, category, i) {
+        var indicator = $('<li data-target="#carousel-' + category + '" data-slide-to="' + (i - 1).toString() + '"' + (i == 1 ? ' class="active"' : '') + '></li>');
+        $('#carousel-' + category).find('.carousel-indicators').append(indicator);
+        var item = $('<div class="item' + (i == 1 ? ' active' : '') + '"></div>');
+        item.append(img);
+        $('#carousel-' + category).find('.carousel-inner').append(item);
+    }
+
+});

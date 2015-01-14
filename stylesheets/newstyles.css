@@ -226,13 +226,8 @@ body {
   opacity: 0.5;
 }
 .carousel-indicators {
-  bottom: -18px;
+  bottom: -12px;
   white-space: nowrap;
-}
-@media (max-width: 767px) {
-  .carousel-indicators-long {
-    margin-left: -41%;
-  }
 }
 .nav-tabs li a {
   color: #a0a0a0;
@@ -244,12 +239,11 @@ body {
   background-color: #444447;
   color: #ffffff;
 }
-.nav-tabs li.active a {
-  background-color: #444447;
-  color: #ffffff;
-}
+.nav-tabs li.active a,
 .nav-tabs li.active a:hover,
 .nav-tabs li.active a:focus {
   background-color: #444447;
   color: #ffffff;
+  border-top: 4px solid #b57d95;
+  margin-top: -4px;
 }
