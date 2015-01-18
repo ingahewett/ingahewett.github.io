@@ -30,6 +30,13 @@ h2, .h2 {
 
 a:focus {
   outline: none;
+  &:not(:hover) {
+    text-decoration: none;
+  }
+}
+
+a.active-layer {
+  border-top: 2px solid @highlight;
 }
 
 body {
@@ -45,6 +52,7 @@ body {
   .content {
     width: 600px;
     margin: auto;
+    overflow: hidden;
   }
   
   @media (max-width: @width-sm-1) {
@@ -58,39 +66,22 @@ body {
     background-color: @bg-light;
   }
 
-  &.section-highlight {
-    background-color: @highlight;
-  }
-
   &.header {
     padding-top: 0;
     padding-bottom: 0;
+    border-bottom: 1px solid @border-dark;
 
     .content {
-      background: url('https://c0901e6dae268d1d3023e19225e875d0794d7fc2.googledrive.com/host/0B-97c_xa0AumY002cnJ1U1FueGc/shoot.png') no-repeat;
-      background-size: 100%;
-      background-position-y: -45px;
 
       .row {
         background-color: @bg-dark-transparent;
-        height: 220px;
-      }
-      @media (max-width: @width-sm-1) {
-        .row {
-          height: 192px;
-        }
-      }
-    }
-    @media (max-width: @width-sm-1) {
-      .content {
-        background-position-y: 0;
-        background-position-x: 20px;
       }
     }
 
     .heading-container {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      float: left;
+      padding-top: 20px;
+      padding-bottom: 30px;
 
       .heading {
         font-size: 32px;
@@ -105,23 +96,19 @@ body {
     }
 
     .nav-container {
-      margin-top: 18px;
-      border-left: 2px solid @border-light;
-      padding-left: 10px;
+
+      float: right;
 
       .nav-item {
-        margin-top: 20px;
-      }
-      @media (max-width: @width-sm-1) {
-        .nav-item {
-          margin-top: 10px;
-        }
-      }
+        display: inline-block;
+        padding-left: 50px;
 
-      a {
-        color: @text-medium;
-        font-size: 12px;
-        text-transform: uppercase;
+        a {
+          color: @text-medium;
+          font-size: 12px;
+          text-transform: uppercase;
+          padding-top: 3px;
+        }
       }
     }
 
@@ -132,42 +119,66 @@ body {
     }
   }
 
-  &.splash {
+  &.main {
     padding-top: 0;
     padding-bottom: 0;
-    img {
-      width: 100%;
-    }
-  }
 
-  &.about {
+    .content {
+      height: 600px;
+      position: relative;
 
-    h2 {
-      border-left: 2px solid @border-light;
-      padding-left: 10px;
-      margin-top: 0;
-    }
-    
-    p {
-      color: @text-medium;
-    }
+      .layer {
+        position: absolute;
 
-    img {
-      max-width: 100%;
-      max-height: 198px;
-    }
-  }
+        &.home {
 
-  &.portfolio {
-    h2 {
-      border-left: 2px solid @border-light;
-      padding-left: 10px;
-      margin-top: 0;
-    }
-  }
+          img {
+            height: 394px;
+            max-width: 100%;
+            margin-top: 30px;
+            opacity: 0.5;
+          }
 
-  &.shout-out {
-    text-align: center;
+          .shout-out {
+            margin-top: 20px;
+          }
+        }
+
+        &.about {
+
+          display: none;
+          padding-top: 100px;
+
+          h2 {
+            border-left: 2px solid @border-light;
+            padding-left: 10px;
+            margin-top: 0;
+          }
+
+          p {
+            color: @text-medium;
+          }
+
+          img {
+            max-width: 100%;
+            max-height: 198px;
+          }
+        }
+
+        &.portfolio {
+
+          display: none;
+          padding-top: 20px;
+
+          h2 {
+            border-left: 2px solid @border-light;
+            padding-left: 10px;
+            margin-top: 0;
+          }
+        }
+
+      }
+    }
   }
 
   &.connect {
@@ -225,6 +236,10 @@ body {
 .highlight {
   color: @highlight !important;
 }
+.section-highlight {
+  background-color: @highlight;
+}
+
 
 .styled-link {
   padding: 9px 16px;

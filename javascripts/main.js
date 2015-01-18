@@ -1,6 +1,22 @@
 $(function () {
 
-    var aboutTextUrl =
+    var layers = ['home', 'about', 'portfolio'];
+    var activeLayer = layers[0];
+    layers.forEach(function(layer) {
+        $('#' + layer + '-link').click(function() {
+            if(activeLayer != layer) {
+                $('.' + activeLayer).fadeOut(300, function() {
+                    $('.' + layer).fadeIn(300);
+                    $('#' + layer + '-link').addClass('active-layer');
+                    $('#' + activeLayer + '-link').removeClass('active-layer');
+                    activeLayer = layer;
+                });
+            }
+        });
+    });
+
+
+
     $.ajax({
         type: 'GET',
         url: 'https://c0901e6dae268d1d3023e19225e875d0794d7fc2.googledrive.com/host/0B-97c_xa0AumY002cnJ1U1FueGc/about.txt',
