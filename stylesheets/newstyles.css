@@ -98,11 +98,15 @@ body {
 .section.main .content .layer.home img {
   height: 394px;
   max-width: 100%;
-  margin-top: 30px;
   opacity: 0.5;
 }
-.section.main .content .layer.home .shout-out {
+.section.main .content .layer.home .quote {
   margin-top: 20px;
+  font-size: 35px;
+  font-family: 'Great Vibes', cursive;
+}
+.section.main .content .layer.home .caption {
+  font-size: 10px;
 }
 .section.main .content .layer.about {
   display: none;
@@ -131,21 +135,21 @@ body {
 }
 .section.connect {
   text-align: center;
-}
-.section.connect .connect-links {
-  margin-left: 20px;
+  padding-bottom: 50px;
 }
 .section.connect .connect-links .connect-link {
-  margin-right: 20px;
+  margin: 0 10px;
 }
 .section.connect .connect-links .connect-link img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
   background-color: #b57d95;
 }
-.section.connect .contact-details-left {
-  text-align: right;
-}
-.section.connect .contact-details-right {
+.section.connect .contact-details {
+  display: inline-block;
   text-align: left;
+  margin-top: 30px;
 }
 .section.footer {
   text-align: center;

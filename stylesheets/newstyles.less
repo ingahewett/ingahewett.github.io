@@ -135,12 +135,16 @@ body {
           img {
             height: 394px;
             max-width: 100%;
-            margin-top: 30px;
             opacity: 0.5;
           }
 
-          .shout-out {
+          .quote {
             margin-top: 20px;
+            font-size: 35px;
+            font-family: 'Great Vibes', cursive;
+          }
+          .caption {
+            font-size: 10px;
           }
         }
 
@@ -183,21 +187,24 @@ body {
 
   &.connect {
     text-align: center;
+    padding-bottom: 50px;
     .connect-links {
-      margin-left: 20px;
       .connect-link {
-        margin-right: 20px;
+        margin: 0 10px;
         img {
+          width: 60px;
+          height: 60px;
+          border-radius: 10px;
           background-color: @highlight;
         }
       }
     }
-    .contact-details-left {
-      text-align: right;
-    }
-    .contact-details-right {
+    .contact-details {
+      display: inline-block;
       text-align: left;
+      margin-top: 30px;
     }
+
   }
 
   &.footer {
