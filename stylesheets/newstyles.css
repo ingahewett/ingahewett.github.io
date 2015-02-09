@@ -96,7 +96,6 @@ body {
   position: absolute;
 }
 .section.main .content .layer.home img {
-  max-height: 394px;
   max-width: 100%;
   opacity: 0.5;
 }
