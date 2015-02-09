@@ -1,5 +1,7 @@
 $(function () {
 
+    var contentBaseUrl = 'content/';// 'https://c0901e6dae268d1d3023e19225e875d0794d7fc2.googledrive.com/host/0B-97c_xa0AumY002cnJ1U1FueGc/';
+
     var layers = ['home', 'about', 'portfolio'];
     var activeLayer = layers[0];
     layers.forEach(function(layer) {
@@ -19,7 +21,7 @@ $(function () {
 
     $.ajax({
         type: 'GET',
-        url: 'https://c0901e6dae268d1d3023e19225e875d0794d7fc2.googledrive.com/host/0B-97c_xa0AumY002cnJ1U1FueGc/about.txt',
+        url: contentBaseUrl + 'about.txt',
         complete: function(response){
             $('#about-text').html(response.responseText.replace(/\n/g, '<br>'));
         }
@@ -31,7 +33,7 @@ $(function () {
     });
 
     function loadImages(category, i) {
-        var url = 'https://c0901e6dae268d1d3023e19225e875d0794d7fc2.googledrive.com/host/0B-97c_xa0AumY002cnJ1U1FueGc/' + category + '/' + i.toString() + '.jpg';
+        var url = contentBaseUrl + category + '/' + i.toString() + '.jpg';
         fetchImage(url, function(img) {
             loadImages(category, i + 1);
             displayImage(img, category, i);
