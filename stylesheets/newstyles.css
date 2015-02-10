@@ -103,9 +103,9 @@ body {
   opacity: 0.5;
 }
 .section.main .content .layer.home .quote {
-  margin-top: 20px;
-  font-size: 30px;
-  font-family: 'Great Vibes', cursive;
+  margin-top: 37px;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 .section.main .content .layer.home .caption {
   font-size: 10px;
