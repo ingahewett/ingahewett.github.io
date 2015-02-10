@@ -74,7 +74,7 @@ body {
   padding-left: 50px;
 }
 .section.header .nav-container .nav-item a {
-  color: #a0a0a0;
+  color: #ffffff;
   font-size: 12px;
   text-transform: uppercase;
   padding-top: 3px;
@@ -95,13 +95,16 @@ body {
 .section.main .content .layer {
   position: absolute;
 }
+.section.main .content .layer.home {
+  color: #737373;
+}
 .section.main .content .layer.home img {
   max-width: 100%;
   opacity: 0.5;
 }
 .section.main .content .layer.home .quote {
   margin-top: 20px;
-  font-size: 35px;
+  font-size: 30px;
   font-family: 'Great Vibes', cursive;
 }
 .section.main .content .layer.home .caption {
