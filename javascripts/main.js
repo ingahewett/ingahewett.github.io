@@ -27,7 +27,7 @@ $(function () {
         }
     });
 
-    var categories = ['location', 'studio', 'editorial', 'lifestyle'];
+    var categories = ['location', 'studio', 'featured', 'lifestyle'];
     categories.forEach(function(category) {
         loadImages(category, 1);
     });
